@@ -1,0 +1,663 @@
+*,* ::before, *::after{
+box-sizing: border-box;
+margin: auto;
+}
+div.main{
+    background: whitesmoke; /* Old browsers */
+height:calc(100vh);
+width:100%;
+}
+
+ [class*="fontawesome-"]:before {
+	 font-family: 'FontAwesome', sans-serif;
+}
+/* ---------- GENERAL ---------- */
+ * {
+	 box-sizing: border-box;
+	 margin: 0px auto;
+}
+
+ body {
+	 color: #606468;
+	 font: 87.5%/1.5em 'Open Sans', sans-serif;
+	 margin: 0;
+}
+ a {
+	 color: black;
+	 text-decoration: none;
+	 margin: 0;
+	 
+}
+
+ input {
+	 border: black solid 1px;
+	 border-radius: 3px 3px 3px 3px;
+	 font-family: 'Open Sans', Arial, sans-serif;
+	 font-size: 14px;
+	 line-height: 1.5em;
+	 padding: 0;
+}
+
+ .container {
+	 left: 50%;
+	 position: fixed;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+}
+/* ---------- LOGIN ---------- */
+ form {
+	 width: 250px;
+}
+ #login, .logo {
+	 display: inline-block;
+}
+ #login {
+	 border-right: 1px solid black;
+	 padding: 0px 22px;
+	 width: 59%;
+}
+ .logo {
+	 color: #fff;
+	 font-size: 50%;
+	 line-height: 125px;
+}
+ span.fa {
+	 background-color: black;
+	 border-radius: 3px 0px 0px 3px;
+	 color: #000;
+	 float: left;
+	 font-size: 24px;
+	 line-height: 50px;
+	 width: 50px;
+}
+ #login input {
+	 height: 50px;
+	 width: 200px;
+}
+
+ #login form input[type="email"], input[type="password"] {
+	 background-color: #fff;
+	 border-radius: 0px 3px 3px 0px;
+	 color: #000;
+	 margin-bottom: 1em;
+	 padding: 0 16px;
+	 width: 200px;
+}
+ #login form input[type="submit"] {
+	 border-radius: 3px;
+	 -moz-border-radius: 3px;
+	 -webkit-border-radius: 3px;
+	 background-color: #000;
+	 color: #eee;
+	 width: 52%;
+	 text-align: center;
+	 font-weight: bold;
+	/* margin-bottom: 2em;
+	 */
+	 display: inline-block;
+	 text-transform: uppercase;
+	 padding: 5px 10px;
+	 height: 30px;
+	 
+}
+ #login form input[type="submit"]:hover {
+	 background-color: #e0312e;
+}
+
+ .middle {
+	 display: flex;
+	 width: 600px;
+}
+
+/* ---------- ################################ DASHBOARD ####################################---------- */
+
+/* MENU PLEGABLE */
+body{
+	margin: 0;
+	padding: 0;
+  }
+  
+  header{
+	z-index: 1;
+	position: fixed;
+	background: #22242A;
+	padding: 20px;
+	width: calc(100% - 0%);
+	top: 0;
+	height: 30px;
+  }
+
+  .flex-menu {
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   width: 100%;
+  }
+  
+  .left_area{
+	color: #fff;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 900;
+  }
+  
+  .left_area span{
+	color: #19B3D3;
+  }
+  
+  .sidebar{
+	z-index: 1;
+	background:black;
+	color:black;
+	position: fixed;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	transition: 0.5s;
+	transition-property: left;
+	overflow-y: auto;
+  }
+  
+  .profile_info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .sidebar .profile_info .profile_image{
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	margin-bottom: 10px;
+  }
+  
+  .sidebar .profile_info{
+	color: #ccc;
+	margin-top: 0;
+	justify-content: center;
+	background-color: white;
+  }
+  .sidebar .profile_info:hover{
+	background:('img/LOGORB2.png') no-repeat left top
+  }
+  
+  .sidebar a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	transition-property: background;
+  }
+  
+  .sidebar a:hover{
+	background: #e0312e;
+	color: white;
+	text-decoration: none;
+  }
+
+  @media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+  .sidebar i{
+	padding-right: 10px;
+  }
+  
+  label #sidebar_btn{
+	z-index: 1;
+	color: black;
+	cursor: pointer;
+	left: 300px;
+	font-size: 20px;
+	margin: 5px 0;
+	transition: 0.5s;
+	transition-property: color;
+  }
+  
+  label #sidebar_btn:hover{
+	color: #e0312e;
+  }
+  
+  #check:checked ~ .sidebar{
+	left: -185px;
+  }
+  
+  #check:checked ~ .sidebar a span{
+	display: none;
+  }
+  
+  #check:checked ~ .sidebar a{
+	font-size: 20px;
+	margin-left: 165px;
+	width: 100%;
+  }
+  
+  .content{
+	width: (100% - 250px);
+	margin-left: 250px;
+	background-position: center;
+	background-size: cover;
+	transition: 0.5s;
+  }
+  
+  #check:checked ~ .content{
+	margin-left: 60px;
+  }
+  
+  #check:checked ~ .sidebar .profile_info{
+	display: none;
+  }
+
+  
+  #check{
+	display: none;
+  }
+  
+  .mobile_nav{
+	display: none;
+  }
+  
+  .content .card p{
+	background: #CCC;
+	padding: 15px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	opacity: 0.8;
+  }
+
+  
+  /* Responsive CSS */
+  
+  @media screen and (max-width: 780px){
+	.sidebar{
+	  display: none;
+	}
+  
+	#sidebar_btn{
+	  display: none;
+	}
+  
+	.content{
+	  margin-left: 0;
+	  margin-top: 0;
+	  transition: 0s;
+	}
+  
+	#check:checked ~ .content{
+	  margin-left: 0;
+	}
+  
+	.mobile_nav{
+	  display: block;
+	  width: calc(100% - 0%);
+	}
+  
+	.nav_bar{
+	  background: #222;
+	  width: (100% - 0px);
+	  margin-top: 70px;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 10px 20px;
+	}
+  
+	.nav_bar .mobile_profile_image{
+	  width: 50px;
+	  height: 50px;
+	  border-radius: 50%;
+	}
+  
+	.nav_bar .nav_btn{
+	  color: #fff;
+	  font-size: 22px;
+	  cursor: pointer;
+	  transition: 0.5s;
+	  transition-property: color;
+	}
+  
+	.nav_bar .nav_btn:hover{
+	  color: #e0312e;
+	}
+
+	.mobile_nav_items{
+	  background: #2F323A;
+	  display: none;
+	}
+  
+	.mobile_nav_items a{
+	  color: #fff;
+	  display: block;
+	  text-align: center;
+	  letter-spacing: 1px;
+	  line-height: 60px;
+	  text-decoration: none;
+	  box-sizing: border-box;
+	  transition: 0.5s;
+	  transition-property: background;
+	}
+  
+	.mobile_nav_items a:hover{
+	  background: #19B3D3;
+	}
+  
+	.mobile_nav_items i{
+	  padding-right: 10px;
+	}
+  
+	.active{
+	  display: block;
+	}
+  }
+
+  /* ######################################## NOTAS FORM ########################################## */
+
+
+	form, #notas{
+		width:1000px;
+	}
+
+	input{
+		margin-right: 3%;
+		
+	}
+
+	#notas_fecha{
+		text-align: right;
+	}
+
+	.vendedor, .cliente {
+		width: 39%;	
+
+	}
+
+	.direccion{
+		width: 39.5%;
+	}
+
+	.cp{
+		width: 10%;
+	}
+	
+	.tipo_pago, .cuenta, .tipo_envio{
+		width: 21.8%;
+	}
+
+	input#notas_cantidad, input#notas_producto, input#notas_precio, input#notas_importe{
+		width: 100%;
+		height: 40px;
+		text-align:center;
+		margin:0;
+		padding:0;
+		border:none;
+	}
+	input#notas_cantidad{
+		width: 100px;
+	}
+
+	 /* ######################################## REGISTRO FORM ########################################## */
+
+	  #registro form input[type="submit"] {
+	 border-radius: 3px;
+	 -moz-border-radius: 3px;
+	 -webkit-border-radius: 3px;
+	 background-color: #000;
+	 color: #eee;
+	 width: 52%;
+	 text-align: center;
+	 font-weight: bold;
+	/* margin-bottom: 2em;
+	 */
+	 display: inline-block;
+	 text-transform: uppercase;
+	 height: 30px;
+	 width: 150px;
+	 margin-left: 65%;
+	 
+}
+
+	 #registro form input[type="submit"]:hover {
+	 background-color: #e0312e;
+}
+
+	 /* ######################################## LISTA EMPLEADOS ########################################## */
+
+	 .btn-new{
+	 	display: inline-block;
+	 	padding: 5px 10px;
+	 	background: black;
+	 	color: white;
+	 	border-radius: 3px;
+	 	text-decoration: none;
+	 }
+
+	  .btn-new:hover{
+	 	padding: 5px 10px;
+	 	background: #e0312e;
+	 	color: white;
+	 	border-radius: 3px;
+	 	text-decoration: none;
+	 }
+
+	 .link_edit{
+	 	padding: 10px;
+	 	background: #ffd600;
+	 	color: white;
+	 	border-radius: 3px;
+	 	text-decoration: none;
+	 	margin-right: 10px;
+	 }
+
+	 #link_edit:hover{
+	 	text-decoration: none;
+	 	color: white;
+	 	box-shadow: 0 4px 16px rgb(255, 194, 0);
+  		transition: all 0.2s ease;
+	 }
+
+	 .btn-outline-warning:hover{
+	 	color: white;
+	 }
+
+	 .link_delete{
+	 	padding: 10px;
+	 	background: red;
+	 	color: white;
+	 	border-radius: 3px;
+	 	text-decoration: none;
+
+	 }
+
+	 .link_delete:hover{
+	 	text-decoration: none;
+	 	color: white;
+	 	box-shadow: 0 4px 16px rgb(150, 10, 10);
+  		transition: all 0.2s ease;
+  		border: none;
+  	}
+
+	 .link_create{
+	 	padding: 8px;
+	 	background: #1abd04;
+	 	color: white;
+	 	border-radius: 3px;
+	 	text-decoration: none;
+	 	border: none;
+	 	text-align: center;
+	 	margin-right: 10px;
+	 }
+
+	 .link_create:hover{
+	 	text-decoration: none;
+	 	color: white;
+	 	box-shadow: 0 4px 16px rgb(31, 117, 45);
+  		transition: all 0.2s ease;
+
+	 }
+/* ############################################### NOTA PDF ###################################################### */
+
+.h2{
+
+	font-size: 16pt;
+}
+.h3{
+
+	font-size: 12pt;
+	display: block;
+	background: black;
+	color: #FFF;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 5px;
+}
+#page_pdf{
+	width: 95%;
+	margin: 15px auto 10px auto;
+}
+
+#factura_head, #factura_cliente, #factura_detalle{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.logo_factura{
+	width: 25%;
+}
+.info_empresa{
+	width: 50%;
+	text-align: center;
+}
+.info_factura{
+	width: 25%;
+}
+.info_cliente{
+	width: 100%;
+}
+
+.datos_cliente{
+	padding: 10px 10px 0 10px;
+}
+.datos_cliente label{
+	width: 75px;
+	display: inline-block;
+}
+.datos_cliente p{
+	display: inline-block;
+}
+
+.textright{
+	text-align: right;
+}
+.textleft{
+	text-align: left;
+}
+.textcenter{
+	text-align: center;
+}
+.round{
+	border-radius: 10px;
+	border: 1px solid #0a4661;
+	overflow: hidden;
+	padding-bottom: 15px;
+}
+.round p{
+	padding: 0 15px;
+}
+
+#factura_detalle{
+	border-collapse: collapse;
+}
+#factura_detalle thead th{
+	background: black;
+	color: #FFF;
+	padding: 5px;
+}
+#detalle_productos tr:nth-child(even) {
+    background: #ededed;
+}
+#detalle_totales span{
+
+}
+.nota{
+	font-size: 8pt;
+}
+.label_gracias{
+
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	margin-top: 20px;
+}
+/* ############################## NOTA FORM ########################################## */
+.flex-container {
+ 	display: flex;
+  	justify-content: flex-start;
+}
+.link_aprobado{
+	padding: 5px;
+	background: green;
+	border-radius: 5px;
+	color: white;
+}
+.link_aprobado:hover{
+	text-decoration: none;
+	color: white;
+	box-shadow: 0 4px 16px rgb(31, 117, 45);
+  	transition: all 0.2s ease;
+}
+.link_noaprobado{
+	padding: 5px;
+	background: red;
+	border-radius: 5px;
+	color: white;
+}
+.link_noaprobado:hover{
+	text-decoration: none;
+	color: white;
+	box-shadow: 0 4px 16px rgb(150, 10, 10);
+  	transition: all 0.2s ease;
+}
+td{
+	padding: 0px;
+}
+.add_prod{
+	color: green;
+}
+.add_prod:hover{
+	color: green;
+	text-decoration: none;
+}
+.add_del{
+	color: red;
+}
+.add_del:hover{
+	color: red;
+	text-decoration: none;
+}
+textarea{
+	resize: none;
+}
+span.aprobado{
+	background: green;
+	color: white;
+	padding: 2px 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+span.noaprobado{
+	background: red;
+	color: white;
+	padding: 2px 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
